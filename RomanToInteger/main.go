@@ -14,7 +14,7 @@ func romanToInt(s string) int {
 	result := 0
 	n := len(s)
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		if i < n-1 && romanMap[s[i]] < romanMap[s[i+1]] {
 			result -= romanMap[s[i]]
 		} else {
